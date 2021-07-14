@@ -1,0 +1,20 @@
+<table>
+    <thead >
+        <th>id</th>
+        <th>username</th>
+        <th>accno</th>
+        <th>balance</th>
+        <th>password</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let item of details">
+            <td>{{item._id}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.accno}}</td>
+            <td>{{item.balance}}</td>
+            <td>{{item.password}}</td>
+            <td (click)="edit(item)">EDIT</td>
+        </tr>
+    </tbody>
+</table>

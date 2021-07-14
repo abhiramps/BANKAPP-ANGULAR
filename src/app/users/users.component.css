@@ -1,0 +1,11 @@
+thead{
+text-align: center;
+}
+
+thead th,tr td{
+    padding: 0 1rem; 
+    margin: 0 .5rem;
+}
+tr {
+text-align: center;
+}

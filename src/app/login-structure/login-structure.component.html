@@ -1,0 +1,46 @@
+<form [formGroup]="LoginForm" (ngSubmit)="login()">
+    <div class="contents">
+        <div class="username">
+            <input formControlName="username" name="username"  type="text" id="user"
+            placeholder="user name" class="form-control">
+
+            <label *ngIf="LoginForm.get('username')?.touched && LoginForm.get('username')?.errors" style="color: red;">
+                
+                invalid username
+            </label>
+            <!-- <ng-template #userValid>
+                <label [style.color]="'green'">enter username</label>
+            </ng-template> -->
+        </div>
+
+        <div class="password">
+            <input formControlName="password" name="password"  type="password" id="pass"
+            placeholder="password" class="form-control">
+
+            <div *ngIf="this.LoginForm.get('password')?.touched && this.LoginForm.get('password')?.errors">
+                <label *ngIf="LoginForm.get('password')?.errors?.required" style="color: red;">invalid password</label>
+                <label *ngIf="LoginForm.get('password')?.errors?.minlength" style="color: red;">password must be 5 chars</label>
+            </div>
+                
+        </div>
+
+        <div class="submit">
+            <button type="submit"  class="btn btn-primary bg-dark">{{submit}}</button>
+        </div>
+
+
+        <div *ngIf="message==sucess; else notValid ">
+
+            <label [style.color]="'green'">user verified sucessfully</label>
+
+        </div>
+        <ng-template #notValid>
+            <label [style.color]="'red'">{{sucess}}</label>
+        </ng-template>
+
+    </div>
+</form>
+
+<!-- 
+(change)="onUserNameChange($event)"
+(change)="onPasswordChange($event)" -->

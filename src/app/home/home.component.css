@@ -1,0 +1,40 @@
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    top: 3rem;
+}
+#grid1 {
+    margin-top: 10%;
+   
+}
+
+#user,
+#pass {
+    margin: 4px;
+    margin-top: 20px;
+}
+
+#login {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 20px;
+
+}
+
+button {
+    width: 90%;
+    height: 50px;
+
+}
+
+#txtdpst,
+#txtwtdw {
+    margin-top: 70px;
+
+}
+
+#dpst,
+#wtdw {
+    margin-top: 20px;
+}

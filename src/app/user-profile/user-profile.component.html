@@ -1,0 +1,16 @@
+<form [formGroup]="userProfile" (ngSubmit)="update()">
+    <div class="wraper"> 
+        <div>
+            <input type="text" formControlName="username" name="username" id="" placeholder="username">
+        </div>
+        <div>
+            <input type="text" formControlName="accountNo" name="accountNo" placeholder="account number">
+        </div>
+        <div>
+            <input type="text" formControlName="balance" name="balance" placeholder="balance">
+        </div>
+        <div>
+           <button type="submit">update</button>
+        </div>
+    </div>
+</form>

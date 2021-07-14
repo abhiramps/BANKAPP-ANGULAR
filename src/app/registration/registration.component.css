@@ -1,0 +1,41 @@
+#box {
+    /* border-style: solid; */
+    background-color: white;
+    margin-top: 30px;
+    height: 500px;
+    border-radius: 12px;
+    /* width: 500px; */
+
+
+}
+
+#user{
+    margin-top: 40px;
+
+    width: 90%;
+    height: 40px;
+
+   
+    background-color: rgb(240, 240, 240);
+}
+
+#accno,#balance,#pass,#rpass {
+    margin-top: 10px;
+    width: 90%;
+    height: 40px;
+    background-color: rgb(240, 240, 240);
+}
+
+
+button {
+    
+    margin-top: 20px;
+    
+    height: 50px;
+    width: 90%;
+    border-style: solid;
+}
+
+h1 {
+    font-size: 40px;
+}

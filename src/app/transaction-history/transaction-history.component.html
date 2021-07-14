@@ -1,0 +1,16 @@
+<table>
+    <thead >
+        <th>username</th>
+        <th>amount</th>
+        <th>type_of_transaction</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let data of transactions">
+            <td>{{data.username}}</td>
+            <td>{{data.amount}}</td>
+            <td>{{data.type_of_transaction}}</td>
+        </tr>
+    </tbody>
+</table>
+<!-- {{ objectKeys[transactions]}} -->

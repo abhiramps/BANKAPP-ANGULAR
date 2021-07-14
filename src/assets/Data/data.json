@@ -1,0 +1,5 @@
+{
+   " userone": { "accno": 1000, "balance": 1000, "username": "userone", "password": "testuser1" },
+    "usertwo": { "accno": 1001, "balance": 1000, "username": "usertwo", "password": "testuser2" },
+    "userthree":{ "accno": 1002, "balance": 1000, "username": "userthree", "password": "testuser3" }
+}

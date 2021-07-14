@@ -1,0 +1,71 @@
+<div class="container">
+
+    <h1>home page</h1>
+    <div class="row" id="grid1">
+        <div class="col-2">
+            <span style="cursor: pointer;" (click)="onBack()">BACK</span>
+
+            <div>
+                <button (click)="logout()">logout</button>
+            </div>
+        </div>
+        
+        <div>
+            <a routerLink="/userProfile">user profile</a>
+        </div>
+        
+        <div class="col form-group form-group shadow-lg p-4 mb-2 bg-white rounded" style="background-color: white;">
+
+            <!-- <app-login-structure (UserName)="username= $event" (PassworD)="password=$event" [submit]="btn_name"
+                [message]="msg"></app-login-structure> -->
+
+            <!-- <div id="user">
+                <input type="text" (change)="onUsernameChange($event)" style="background-color: rgb(240, 240, 240);" placeholder="user name" class="form-control">
+
+
+            </div>
+            <div id="pass">
+                <input type="text" (change)="onPasswordChange($event)" style="background-color: rgb(240, 240, 240);" placeholder="password"
+                    class="form-control">
+            </div>
+            <div id="login">
+                <button type="submit"  class="btn btn-primary bg-dark">verify</button>
+            </div> -->
+
+            <form [formGroup]="homeForm">
+                <div class="row form-group">
+                    <div class="col" id="txtdpst">
+                        <input type="text" formControlName="amount" name="amount"
+                            style="background-color: rgb(240, 240, 240);" placeholder=" deposit amount"
+                            class="form-control">
+                        <input type="submit" id="dpst" (click)="onDeposit()" value="deposit"
+                            class="btn btn-primary form-control">
+                    </div>
+
+                    <div class="col" id="txtwtdw">
+                        <input type="text"  formControlName="amount" name="amount" 
+                            style="background-color: rgb(240, 240, 240);" placeholder="withdraw amount"
+                            class="form-control">
+                        <input type="submit" id="wtdw" (click)="onWithdraw()" value="withdraw"
+                            class="btn btn-primary form-control">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-2">
+            <!-- <label>
+               avalBalance ={{avalBalance}}
+            </label> -->
+            <a routerLink="/transHistory">transaction-history</a>
+
+            
+        </div>
+    </div>
+
+</div>
+
+
+<!-- event binding -->
+<!-- (change)="onDepositChange($event)"
+(change)="onWithdrawChange($event)" -->

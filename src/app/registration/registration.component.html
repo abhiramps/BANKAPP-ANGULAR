@@ -1,0 +1,92 @@
+<div class="container">
+
+    <div class="row" style="margin: 3%;">
+
+        <div class="col-3">
+            <!-- <h3><a href="" routerLink="/login">LOGIN</a> </h3> -->
+        </div>
+
+        <div id="box" class="col-6 form-group shadow-lg p-4 mb-2 bg-white rounded">
+            <h1 style="text-align: center; margin-top: 20px;">Register here</h1>
+
+            <!-- -----------------username------------------------- -->
+            <form [formGroup]="RegForm" (ngSubmit)="register()">
+                <div style=" width: 100%;  margin-left: 30px;">
+                    <input type="text" formControlName="username" name="username"  id="user" placeholder="user name"
+                        class="form-control">
+                </div>
+                <span *ngIf="RegForm.get('username')?.touched && RegForm.get('username')?.errors?.required">
+                    <label [style.color]="'red'">username is invalid</label>
+                </span>
+                <span *ngIf="RegForm.get('username')?.errors?.pattern?.actualValue">
+                    <label [style.color]="'red'">name must be charactors</label>
+                </span>
+
+            <!-- -----------------account number------------------------- -->
+                <div style="width: 100%;  margin-left: 30px;">
+                    <input type="text" formControlName="accno" name="accno" id="accno" placeholder="account number"
+                        class="form-control">
+                </div>
+                <span *ngIf="RegForm.get('accno')?.errors?.minlength.actualLength">
+                    <label [style.color]="'red'">enter atleast 4 digit number</label>
+                </span>
+                <span *ngIf="RegForm.get('accno')?.touched && RegForm.get('accno')?.errors?.required">
+                    <label [style.color]="'red'">account number is invalid</label>
+                </span>
+
+            <!-- -----------------balance------------------------- -->
+                <div style="width: 100%;  margin-left: 30px;">
+                    <input type="number" formControlName="balance" name="balance"  id="balance" placeholder="balance"
+                        class="form-control">
+                </div>
+                <!-- <span *ngIf="RegForm.get('balance')?.errors?.pattern?.actualValue">
+                    <label [style.color]="'red'">enter excat 10 digit number</label>
+                </span> -->
+                <span *ngIf="RegForm.get('balance')?.touched && RegForm.get('balance')?.errors?.required">
+                    <label [style.color]="'red'">balance is invalid</label>
+                </span>
+
+            <!-- -----------------password------------------------- -->
+
+                <div style=" width: 100%; margin-left: 30px;">
+                    <input type="password" formControlName="password" name="password"  id="pass" placeholder="password"
+                        class="form-control">
+                </div>
+                <span *ngIf="RegForm.get('password')?.touched && RegForm.get('password')?.errors?.required">
+                    <label [style.color]="'red'">password is invalid</label>
+                </span>
+                <label [style.color]="'red'" *ngIf="RegForm.get('password')?.errors?.pattern?.actualValue">
+                    password must have atleast 6 charactors,number,special charactors,uppercase
+                </label>
+
+                 <!-- -----------------confirm  password------------------------- -->
+                <div style=" width: 100%; margin-left: 30px;">
+                    <input type="password" formControlName="confirmPass" name="confirmPass" id="rpass"
+                        placeholder="re-enter password" class="form-control">
+                </div>
+                <span *ngIf="RegForm.get('confirmPass')?.touched && RegForm.get('confirmPass')?.errors?.required">
+                    <label [style.color]="'red'">password is invalid</label>
+                   
+                </span>
+               
+                <!-- -----------------submit button------------------------ -->
+                <div style="margin-left: 2rem;">
+                    <button type="submit"  class="btn btn-primary bg-dark">Register</button>
+                </div>
+                <div style="width: 100%; text-align: center; ">
+                    <label style="color: grey;" for="">already have an account?
+                        <a routerLink="/login">login</a>
+                    </label>
+                </div>
+            </form>
+
+            <div class="col-3"></div>
+        </div>
+    </div>
+</div>
+
+<!-- (change)="onUserNameChange($event)"
+(change)="onAccnoChange($event)" 
+(change)="onBalanceChange($event)"
+(change)="onPasswordChange($event)"
+(change)="onRePasswordChange($event)" -->
